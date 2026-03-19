@@ -95,6 +95,74 @@
             <div class="gradient-band-also-text"><span class="coming-soon-text"># Coming Soon</span></div>
             <div class="gradient-band-products-text">IronPDF Beta Program also coming soon for <span class="product-highlight">Python</span> | <span class="product-highlight">Node.js</span> | <span class="product-highlight">Java</span></div>
         </div>
+
+        <div class="coming-soon-section">
+            <div class="upper-section">
+               <div class="ironpdf-title-container">
+                 <h2 class="ironpdf-title">IronPDF for C++</h2>
+                 <img class="coming-soon-badge" src="/assets/img/coming-soon-badge.svg" width="81.47" height="81.47" alt="Coming Soon" loading="eager" decoding="async">
+               </div>
+               <div class="features-list">
+                 <div class="feature-item">
+                   <span class="feature-hash">#</span>
+                   <span class="feature-text">Generate PDFs from HTML in C++</span>
+                 </div>
+                 <div class="feature-divider"></div>
+                 <div class="feature-item">
+                   <span class="feature-hash">#</span>
+                   <span class="feature-text">Combine, split, and modify PDFs quickly in C++</span>
+                 </div>
+                 <div class="feature-divider"></div>
+                 <div class="feature-item">
+                   <span class="feature-hash">#</span>
+                   <span class="feature-text">Extract text and images from PDFs using C++</span>
+                 </div>
+               </div>
+            </div>
+            <div class="description-section">
+              <div class="description-text">
+                <p>The new <span class="highlight-medium">IronPDF library for C++</span> will enhance the C++ developer's tool set with robust PDF generation and conversion capabilities. Developers will be able to generate new PDFs from HTML content (from text or from URL), as well as to combine, split, extract, and modify content from existing PDFs.</p>
+                <p><span class="highlight-medium">IronPDF for C++</span> <span class="highlight-light">will help developers create C++ applications that can do all of these PDF processing tasks and more, with speed, precision, control, and excellence.</span></p>
+              </div>
+            </div>
+            <div class="why-section">
+              <img class="htmltopdf-img" src="/assets/img/htmltopdf.svg" width="270.17" height="179.51" alt="HTML to PDF" loading="eager" decoding="async">
+              <div class="why-content">
+                <h2 class="why-title">Why make a <span class="cpp-highlight">C++ PDF Library</span></h2>
+                <p class="why-description">C++ is one of the most popular, oldest, and important programming languages in use, being the language of choice in low-level systems and network programming and other domains where performance is critical.</p>
+                <p class="why-description">The release of IronPDF for C++ will aid developers in building performant applications that can carry out PDF-related processing tasks</p>
+              </div>
+            </div>
+            <div class="early-access-section">
+              <div class="early-access-content">
+                <h2 class="early-access-title">Early Access to <span class="cpp-highlight-small">C++ PDF Library</span></h2>
+                <p class="early-access-description">Joining the early access program will allow you to collaborate closely with our engineering team. You will be playing a key role in the development process as you share your early experiences using the C++ PDF library before its official launch. Your continual feedback after we release the library will be immensely helpful as we release new features and improve on existing features.</p>
+              </div>
+              <div class="cards-container">
+                <div class="released-card">
+                  <div class="released-badge"># Released</div>
+                  <img class="java-logo" src="/assets/img/iron-pdf-java.svg" width="112.02" height="39.47" alt="IronPDF Java" loading="eager" decoding="async">
+                </div>
+                <div class="coming-soon-card">
+                  <div class="coming-soon-badge"># Coming Soon</div>
+                  <img class="python-logo" src="/assets/img/iron-pdf-python.svg" width="112.02" height="42.19" alt="IronPDF Python" loading="eager" decoding="async">
+                </div>
+                <div class="coming-soon-card">
+                  <div class="coming-soon-badge"># Coming Soon</div>
+                  <img class="nodejs-logo" src="/assets/img/iron-pdf-nodejs.svg" width="112.02" height="42.19" alt="IronPDF Node.js" loading="eager" decoding="async">
+                </div>
+              </div>
+            </div>
+            <div class="beta-program-section">
+              <div class="beta-program-content">
+                <h2 class="beta-program-title">Sign up to our <span class="beta-highlight">Beta Program</span></h2>
+                <form class="beta-program-form" action="#" method="post">
+                  <input class="beta-program-input" type="email" name="email" placeholder="Enter your email" autocomplete="email">
+                  <button class="beta-program-button" type="button">Sign up now <i class="fas fa-caret-right"></i></button>
+                </form>
+              </div>
+            </div>
+        </div>
 </main>
 
 </body>
