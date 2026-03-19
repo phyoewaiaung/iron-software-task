@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/gotham-regular.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/gotham-light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/gotham-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/assets/css/fonts/gotham-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-900: #120814;
+  --bg-850: #1b0a1c;
+  --bg-800: #241127;
+  --surface-700: rgba(255, 255, 255, 0.06);
+  --surface-800: rgba(255, 255, 255, 0.04);
+  --text-100: rgba(255, 255, 255, 0.92);
+  --text-200: rgba(255, 255, 255, 0.75);
+  --text-300: rgba(255, 255, 255, 0.6);
+  --brand: #ff2a6d;
+  --brand-2: #ff6a00;
+  --brand-3: #6cf0ff;
+  --radius-lg: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gotham', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  color: var(--text-100);
+  min-height: 100vh;
+  background: radial-gradient(1200px 900px at 15% 20%, #3a133f 0%, transparent 60%),
+    radial-gradient(900px 700px at 80% 0%, #2b0d2f 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-900), var(--bg-850)) !important;
+  background-color: var(--bg-900) !important;
+  position: relative
+}
+
+.tracking-wide {
+  letter-spacing: 0.08em;
+}
