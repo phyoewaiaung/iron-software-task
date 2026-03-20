@@ -14,12 +14,14 @@ A production-ready, responsive landing page implementing the provided Figma desi
 
 ## 🛠 Technology Stack
 
-- **Backend**: CodeIgniter 4 (PHP 8.2+)
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Framework**: Bootstrap 5.3.3 (CDN)
-- **Fonts**: Gotham (primary), Montserrat (fallback)
-- **Icons**: FontAwesome 6.4.0
-- **Architecture**: MVC pattern with modular CSS
+- CodeIgniter 4 (PHP 8.2+)
+- HTML5
+- CSS3
+- Bootstrap 5.3.3 (CDN)
+- JavaScript (ES6+)
+- Gotham font family
+- FontAwesome 6.4.0
+- MVC architecture
 
 ## 📁 Project Structure
 
