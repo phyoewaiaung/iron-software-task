@@ -3,137 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Documentation - IronPDF for C++ Landing Page</title>
+    <title>IronPDF for C++ Landing Page - Documentation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #e01a59;
-            --secondary-color: #2c0f29;
-            --accent-color: #8e608e;
-            --light-bg: #f8f9fa;
-            --border-color: #dee2e6;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: var(--secondary-color);
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            min-height: 100vh;
+            color: #2c0f29;
+            background: #f8f9fa;
         }
-
-        .hero-section {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+        
+        .header {
+            background: linear-gradient(135deg, #2c0f29 0%, #8e608e 100%);
             color: white;
-            padding: 80px 0;
-            margin-bottom: 40px;
+            padding: 60px 0;
+            text-align: center;
         }
-
-        .hero-content h1 {
-            font-size: 3rem;
+        
+        .header h1 {
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        .status-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .status-badge.success {
-            background: #28a745;
-        }
-
-        .section-card {
+        
+        .section {
             background: white;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 900px;
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--primary-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #e01a59;
         }
-
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .section-title {
-            color: var(--secondary-color);
+        
+        .section h2 {
+            color: #2c0f29;
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
         }
-
-        .section-title i {
-            color: var(--primary-color);
+        
+        .section h2 i {
+            color: #e01a59;
             margin-right: 15px;
-            font-size: 1.5rem;
         }
-
-        .tech-stack {
+        
+        .tech-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 15px;
+            margin: 20px 0;
         }
-
+        
         .tech-badge {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
             padding: 8px 16px;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
         }
-
-        .tech-badge:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
+        
         .feature-list {
             list-style: none;
             padding: 0;
             margin: 20px 0;
         }
-
+        
         .feature-list li {
             padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #dee2e6;
             display: flex;
             align-items: center;
         }
-
+        
         .feature-list li:last-child {
             border-bottom: none;
         }
-
+        
         .feature-list i {
-            color: var(--primary-color);
+            color: #e01a59;
             margin-right: 15px;
             width: 20px;
-            text-align: center;
         }
-
+        
         .code-block {
             background: #2d3748;
             color: #e2e8f0;
@@ -144,362 +99,166 @@
             overflow-x: auto;
             margin: 20px 0;
         }
-
+        
         .btn-primary {
-            background: var(--primary-color);
+            background: #e01a59;
             border: none;
-            padding: 12px 30px;
+            padding: 12px 25px;
             font-weight: 600;
             border-radius: 8px;
-            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            margin: 5px;
+            color: white;
+            transition: all 0.3s ease;
         }
-
+        
         .btn-primary:hover {
             background: #c91845;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(224, 26, 89, 0.3);
             color: white;
         }
-
-        .btn-secondary {
-            background: var(--secondary-color);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            color: white;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .btn-secondary:hover {
-            background: #1a0a1a;
-            transform: translateY(-2px);
-            color: white;
-        }
-
+        
         .footer {
-            background: var(--secondary-color);
+            background: #2c0f29;
             color: white;
-            padding: 40px 0;
-            margin-top: 60px;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
         }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
+        
+        .footer a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             transition: color 0.3s ease;
         }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
+        
+        .footer a:hover {
+            color: #e01a59;
         }
-
+        
         @media (max-width: 768px) {
-            .hero-content h1 {
+            .header h1 {
                 font-size: 2rem;
             }
             
-            .section-card {
-                padding: 20px;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
+            .section {
+                padding: 25px;
+                margin: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- Header -->
+    <div class="header">
         <div class="container">
-            <div class="hero-content text-center">
-                <h1>IronPDF for C++ Landing Page</h1>
-                <p>Production-ready responsive web application with modern development practices</p>
-                <div class="mb-3">
-                    <span class="status-badge success">Production Ready</span>
-                    <span class="status-badge">QA Passed</span>
-                    <span class="status-badge">Optimized</span>
-                </div>
-                <div class="mt-4">
-                    <a href="/" class="btn-primary"><i class="fas fa-home"></i> View Project</a>
-                    <a href="/qa-checklist.html" class="btn-secondary"><i class="fas fa-check-circle"></i> QA Checklist</a>
-                </div>
+            <h1>IronPDF for C++ Landing Page</h1>
+            <p class="lead">Production-ready responsive web application</p>
+            <div class="mt-3">
+                <a href="/" class="btn-primary"><i class="fas fa-home"></i> View Project</a>
+                <a href="/qa-checklist.html" class="btn-primary"><i class="fas fa-check-circle"></i> QA Checklist</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Main Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                
-                <!-- Technology Stack Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-layer-group"></i>
-                        Technology Stack
-                    </h2>
-                    <div class="tech-stack">
-                        <span class="tech-badge">CodeIgniter 4 (PHP 8.2+)</span>
-                        <span class="tech-badge">HTML5</span>
-                        <span class="tech-badge">CSS3</span>
-                        <span class="tech-badge">Bootstrap 5.3.3</span>
-                        <span class="tech-badge">JavaScript (ES6+)</span>
-                        <span class="tech-badge">Gotham Font Family</span>
-                        <span class="tech-badge">FontAwesome 6.4.0</span>
-                        <span class="tech-badge">MVC Architecture</span>
-                    </div>
-                </div>
-
-                <!-- Key Features Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-star"></i>
-                        Key Features
-                    </h2>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Pixel-perfect Figma implementation with exact typography</li>
-                        <li><i class="fas fa-check"></i> Fully responsive design across all breakpoints</li>
-                        <li><i class="fas fa-check"></i> Advanced SEO optimization (meta tags, structured data)</li>
-                        <li><i class="fas fa-check"></i> Professional accessibility (ARIA labels, keyboard navigation)</li>
-                        <li><i class="fas fa-check"></i> Core Web Vitals optimization (font preloading, lazy loading)</li>
-                        <li><i class="fas fa-check"></i> Data-driven content management with JSON backend</li>
-                        <li><i class="fas fa-check"></i> Modern JavaScript interactions (mobile hamburger menu)</li>
-                        <li><i class="fas fa-check"></i> XSS prevention with PHP esc() function</li>
-                    </ul>
-                </div>
-
-                <!-- Project Structure Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-folder-tree"></i>
-                        Project Structure
-                    </h2>
-                    <div class="code-block">
-├── app/
-│   ├── Controllers/
-│   │   └── Home.php              # Main controller
-│   └── Views/
-│       ├── layout/
-│       │   ├── header.php        # HTML head & navigation
-│       │   └── footer.php        # Scripts & closing tags
-│       └── home.php              # Main landing page
-├── public/
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── base.css          # Fonts, variables, utilities
-│   │   │   ├── style.css         # Main responsive styles
-│   │   │   └── hamburger.css     # Mobile navigation
-│   │   ├── js/
-│   │   │   └── main.js           # Hamburger menu & interactions
-│   │   ├── data/
-│   │   │   └── content.json      # All page content
-│   │   └── img/                  # Images and SVG assets
-│   └── qa-checklist.html         # Interactive QA checklist
-├── QA-CHECKLIST.md               # Markdown QA checklist
-└── README.md                     # Documentation
-                    </div>
-                </div>
-
-                <!-- Quick Start Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-rocket"></i>
-                        Quick Start
-                    </h2>
-                    
-                    <h4>Prerequisites</h4>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-chevron-right"></i> PHP 8.2+ (tested with PHP 8.4)</li>
-                        <li><i class="fas fa-chevron-right"></i> Composer</li>
-                        <li><i class="fas fa-chevron-right"></i> Modern web browser</li>
-                    </ul>
-
-                    <h4>Installation</h4>
-                    <div class="code-block">
-# Install dependencies
-composer install
-
-# Start development server
-php spark serve
-
-# Open in browser
-http://localhost:8080/
-                    </div>
-                </div>
-
-                <!-- Customization Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-palette"></i>
-                        Customization Guide
-                    </h2>
-                    
-                    <h4>Content Management</h4>
-                    <p>All text content is centralized in <code>public/assets/data/content.json</code>:</p>
-                    <div class="code-block">
-{
-  "meta": {
-    "title": "IronPDF for C++ — Beta Software Program",
-    "description": "IronPDF for C++ landing page"
-  },
-  "hero": {
-    "kicker": "Building on the success of IronPDF for .NET",
-    "titleLine1": "Beta Software Program",
-    "titleLine2": "IronPDF for C++"
-  }
-}
-                    </div>
-
-                    <h4>Styling Architecture</h4>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-chevron-right"></i> <code>base.css</code> - Fonts, CSS variables, utilities, accessibility</li>
-                        <li><i class="fas fa-chevron-right"></i> <code>style.css</code> - Main responsive styles and component styles</li>
-                        <li><i class="fas fa-chevron-right"></i> <code>hamburger.css</code> - Mobile navigation and menu interactions</li>
-                    </ul>
-
-                    <h4>JavaScript Features</h4>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-chevron-right"></i> Mobile hamburger menu with accessible toggle</li>
-                        <li><i class="fas fa-chevron-right"></i> Click-outside support for menu closing</li>
-                        <li><i class="fas fa-chevron-right"></i> Smooth transitions and micro-interactions</li>
-                    </ul>
-                </div>
-
-                <!-- Performance Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Performance Optimizations
-                    </h2>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Font preloading for critical Gotham fonts</li>
-                        <li><i class="fas fa-check"></i> Image lazy loading with loading="lazy" attribute</li>
-                        <li><i class="fas fa-check"></i> Deferred JavaScript loading with defer attribute</li>
-                        <li><i class="fas fa-check"></i> CSS custom properties for modern performance</li>
-                        <li><i class="fas fa-check"></i> Minimal JavaScript - only essential interactions</li>
-                        <li><i class="fas fa-check"></i> Optimized Core Web Vitals (CLS, LCP, FID)</li>
-                    </ul>
-                </div>
-
-                <!-- Quality Assurance Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-shield-alt"></i>
-                        Quality Assurance
-                    </h2>
-                    
-                    <h4>QA Checklist</h4>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-chevron-right"></i> <a href="/qa-checklist.html" target="_blank">Interactive HTML QA Checklist</a></li>
-                        <li><i class="fas fa-chevron-right"></i> <a href="/QA-CHECKLIST.md" target="_blank">Markdown QA Checklist</a></li>
-                    </ul>
-
-                    <h4>Expected Lighthouse Scores</h4>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Performance: 90+ (optimized loading and rendering)</li>
-                        <li><i class="fas fa-check"></i> Accessibility: 95+ (comprehensive ARIA support)</li>
-                        <li><i class="fas fa-check"></i> Best Practices: 95+ (modern standards compliance)</li>
-                        <li><i class="fas fa-check"></i> SEO: 100+ (complete meta optimization)</li>
-                    </ul>
-
-                    <h4>Browser Compatibility</h4>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Chrome (latest)</span>
-                        <span class="tech-badge">Firefox (latest)</span>
-                        <span class="tech-badge">Safari (latest)</span>
-                        <span class="tech-badge">Edge (Chromium)</span>
-                        <span class="tech-badge">Mobile Browsers</span>
-                    </div>
-                </div>
-
-                <!-- Security Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-lock"></i>
-                        Security Features
-                    </h2>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> XSS prevention with PHP esc() function</li>
-                        <li><i class="fas fa-check"></i> Proper input sanitization</li>
-                        <li><i class="fas fa-check"></i> No console logs in production</li>
-                        <li><i class="fas fa-check"></i> Secure meta tags implementation</li>
-                        <li><i class="fas fa-check"></i> Modern web security practices</li>
-                    </ul>
-                </div>
-
-                <!-- Assignment Requirements Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-tasks"></i>
-                        Assignment Requirements Met
-                    </h2>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Latest HTML5, CSS3, JavaScript</li>
-                        <li><i class="fas fa-check"></i> Bootstrap 5 + clean custom CSS</li>
-                        <li><i class="fas fa-check"></i> Minimal JavaScript (only when necessary)</li>
-                        <li><i class="fas fa-check"></i> Pixel-perfect Figma implementation</li>
-                        <li><i class="fas fa-check"></i> Fully responsive design</li>
-                        <li><i class="fas fa-check"></i> Semantic HTML5 structure</li>
-                        <li><i class="fas fa-check"></i> Basic accessibility implementation</li>
-                        <li><i class="fas fa-check"></i> Core Web Vitals optimization</li>
-                        <li><i class="fas fa-check"></i> SEO best practices</li>
-                        <li><i class="fas fa-check"></i> Cross-browser compatibility</li>
-                    </ul>
-                </div>
-
-                <!-- Links Section -->
-                <div class="section-card">
-                    <h2 class="section-title">
-                        <i class="fas fa-link"></i>
-                        Quick Links
-                    </h2>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="/" class="btn-primary"><i class="fas fa-home"></i> Main Project</a>
-                        <a href="/qa-checklist.html" class="btn-secondary"><i class="fas fa-check-circle"></i> QA Checklist</a>
-                        <a href="/QA-CHECKLIST.md" class="btn-secondary"><i class="fas fa-file-alt"></i> QA (Markdown)</a>
-                        <a href="https://github.com/phyoewaiaung/iron-software-task" class="btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
+        <!-- Technology Stack -->
+        <div class="section">
+            <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+            <div class="tech-list">
+                <span class="tech-badge">CodeIgniter 4 (PHP 8.2+)</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">Bootstrap 5.3.3</span>
+                <span class="tech-badge">JavaScript (ES6+)</span>
+                <span class="tech-badge">Gotham Font Family</span>
+                <span class="tech-badge">FontAwesome 6.4.0</span>
+                <span class="tech-badge">MVC Architecture</span>
             </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Pixel-perfect Figma implementation</li>
+                <li><i class="fas fa-check"></i> Fully responsive design</li>
+                <li><i class="fas fa-check"></i> SEO optimization (meta tags, structured data)</li>
+                <li><i class="fas fa-check"></i> Accessibility (ARIA labels, keyboard navigation)</li>
+                <li><i class="fas fa-check"></i> Core Web Vitals optimization</li>
+                <li><i class="fas fa-check"></i> Data-driven content management</li>
+                <li><i class="fas fa-check"></i> Mobile hamburger menu</li>
+                <li><i class="fas fa-check"></i> XSS prevention with PHP esc()</li>
+            </ul>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="section">
+            <h2><i class="fas fa-rocket"></i> Quick Start</h2>
+            <h4>Prerequisites</h4>
+            <ul class="feature-list">
+                <li><i class="fas fa-chevron-right"></i> PHP 8.2+</li>
+                <li><i class="fas fa-chevron-right"></i> Composer</li>
+                <li><i class="fas fa-chevron-right"></i> Modern web browser</li>
+            </ul>
+            
+            <h4>Installation</h4>
+            <div class="code-block">
+                git clone https://github.com/phyoewaiaung/iron-software-task.git <br>
+                cd iron-software-task <br>
+                composer install <br>
+                php spark serve <br>
+                # Open http://localhost:8080/
+            </div>
+        </div>
+
+        
+        <!-- Assignment Requirements -->
+        <div class="section">
+            <h2><i class="fas fa-tasks"></i> Assignment Requirements Met</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Latest HTML5, CSS3, JavaScript</li>
+                <li><i class="fas fa-check"></i> Bootstrap 5 + clean custom CSS</li>
+                <li><i class="fas fa-check"></i> Minimal JavaScript (only when necessary)</li>
+                <li><i class="fas fa-check"></i> Pixel-perfect Figma implementation</li>
+                <li><i class="fas fa-check"></i> Fully responsive design</li>
+                <li><i class="fas fa-check"></i> Semantic HTML5 structure</li>
+                <li><i class="fas fa-check"></i> Basic accessibility implementation</li>
+                <li><i class="fas fa-check"></i> Core Web Vitals optimization</li>
+                <li><i class="fas fa-check"></i> SEO best practices</li>
+                <li><i class="fas fa-check"></i> Cross-browser compatibility</li>
+            </ul>
+        </div>
+
+        <!-- Quality Assurance -->
+        <div class="section">
+            <h2><i class="fas fa-shield-alt"></i> Quality Assurance</h2>
+            <h4>QA Checklist</h4>
+            <ul class="feature-list">
+                <li><i class="fas fa-chevron-right"></i> <a href="/qa-checklist.html">Interactive HTML QA Checklist</a></li>
+            </ul>
+            
+            <h4>Expected Lighthouse Scores</h4>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Performance: 90+</li>
+                <li><i class="fas fa-check"></i> Accessibility: 95+</li>
+                <li><i class="fas fa-check"></i> Best Practices: 95+</li>
+                <li><i class="fas fa-check"></i> SEO: 100+</li>
+            </ul>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="text-center">
-                <div class="footer-links">
-                    <a href="/"><i class="fas fa-home"></i> Home</a>
-                    <a href="/qa-checklist.html"><i class="fas fa-check-circle"></i> QA Checklist</a>
-                    <a href="https://github.com/phyoewaiaung/iron-software-task" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="/readme.html"><i class="fas fa-book"></i> Documentation</a>
-                </div>
-                <p class="mb-0">© 2026 IronPDF for C++ Landing Page. Production Ready Application.</p>
-                <p class="mb-0">
-                    <i class="fas fa-check-circle text-success"></i> Status: Production Ready | 
-                    <i class="fas fa-shield-alt text-info"></i> Security: Implemented | 
-                    <i class="fas fa-tachometer-alt text-warning"></i> Performance: Optimized
-                </p>
+            <div class="mb-3">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <a href="/qa-checklist.html"><i class="fas fa-check-circle"></i> QA Checklist</a>
+                <a href="https://github.com/phyoewaiaung/iron-software-task" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
+            <p class="mb-0">© 2026 IronPDF for C++ Landing Page | Production Ready</p>
         </div>
     </footer>
 

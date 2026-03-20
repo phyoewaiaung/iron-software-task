@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/img/iron-pdf.svg">
+
 <!-- SEO Meta Tags -->
 <title><?= esc($meta['title']) ?></title>
 <meta name="description" content="<?= esc($meta['description']) ?>">
