@@ -1,7 +1,25 @@
 <!-- app/Views/home.php -->
 <?= view('layout/header') ?>
 
-<main>
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "IronPDF for C++",
+  "description": "Professional C++ PDF library for generating, manipulating, and converting PDF documents",
+  "url": "https://ironsoftware.com/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Cross-platform",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero">
@@ -13,10 +31,10 @@
 
   <!-- ICON -->
   <div class="logo-text-wrap">
-  <img src="/assets/img/iron-pdf.svg" alt="" class="logo-icon">
+  <img src="/assets/img/iron-pdf.svg" alt="IronPDF Logo" class="logo-icon">
   <!-- TEXT -->
-    <img src="/assets/img/iron.svg" alt="" >
-    <img src="/assets/img/pdf.svg" alt="" >
+    <img src="/assets/img/iron.svg" alt="Iron Software" >
+    <img src="/assets/img/pdf.svg" alt="PDF Icon" >
     <span class="logo-for">for C++</span>
   </div>
 
@@ -64,6 +82,7 @@
         <input 
           type="email" 
           placeholder="<?= esc($gradientBand['emailPlaceholder']) ?>"
+          aria-label="<?= esc($gradientBand['emailPlaceholder']) ?>"
         >
         <button>
           <?= esc($gradientBand['buttonText']) ?> <i class="fas fa-caret-right"></i>
@@ -157,15 +176,12 @@
       <div class="why-content">
 
         <h2 class="why-title">
-          Why make a <span>C++ PDF Library</span>
+          <?= esc($whySection['title']['before']) ?><span><?= esc($whySection['title']['spanned']) ?></span>
         </h2>
 
         <p class="why-text">
-          C++ is one of the most popular, oldest, and important programming languages in use, being the language of choice in low-level systems and network programming and other domains where performance is critical.
-        </p>
-
-        <p class="why-text">
-          The release of IronPDF for C++ will aid developers in building performant applications that can carry out PDF-related processing tasks
+          <?= esc($whySection['body'][0]) ?><br>
+          <?= esc($whySection['body'][1]) ?>
         </p>
 
       </div>
@@ -182,11 +198,11 @@
     <!-- HEADER -->
     <div class="early-header">
       <h2 class="early-title">
-        Early Access to <span>C++ PDF Library</span>
+        <?= esc($platformSection['title']['before']) ?><span><?= esc($platformSection['title']['spanned']) ?></span>
       </h2>
 
       <p class="early-subtitle">
-        Joining the early access program will allow you to collaborate closely with our engineering team. You will be playing a key role in the development process as you share your early experiences using the C++ PDF library before its official launch. Your continual feedback after we release the library will be immensely helpful as we release new features and improve on existing features.
+        <?= esc($platformSection['body']) ?>
       </p>
     </div>
 
@@ -238,17 +254,18 @@
     <div class="final-inner">
 
       <h2 class="final-title">
-        Sign up to our <span>Beta Program</span>
+        <?= esc($finalCta['title']) ?>
       </h2>
 
       <!-- FORM -->
       <div class="final-form">
         <input 
           type="email" 
-          placeholder="Enter email address"
+          placeholder="<?= esc($finalCta['emailPlaceholder']) ?>"
+          aria-label="<?= esc($finalCta['emailPlaceholder']) ?>"
         >
         <button>
-          Sign up now <i class="fas fa-caret-right"></i>
+          <?= esc($finalCta['button']) ?> <i class="fas fa-caret-right"></i>
         </button>
       </div>
 

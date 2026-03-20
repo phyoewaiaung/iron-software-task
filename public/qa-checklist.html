@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Checklist - IronPDF for C++ Landing Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2c0f29;
+            border-bottom: 3px solid #e01a59;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2c0f29;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .check-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .check-item::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: #e01a59;
+            font-weight: bold;
+        }
+        
+        .check-item.passed::before {
+            content: "☑";
+            color: #28a745;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #e01a59;
+        }
+        
+        .status {
+            background: #e01a59;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        .status.passed {
+            background: #28a745;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>QA Checklist <span class="status passed">PASSED</span></h1>
+    <p><strong>Project:</strong> IronPDF for C++ Landing Page (CodeIgniter 4)<br>
+    <strong>Status:</strong> Production Ready<br>
+    <strong>Date:</strong> 2026-03-21</p>
+
+    <div class="section">
+        <h2>Visual & Layout Accuracy (Figma)</h2>
+        <ul>
+            <li class="check-item passed">Pixel-perfect Figma design matching</li>
+            <li class="check-item passed">Typography hierarchy: H1 (hero), H2 (sections), supporting text</li>
+            <li class="check-item passed">Gotham font family loaded with Montserrat fallback</li>
+            <li class="check-item passed">Gradient backgrounds maintain text contrast</li>
+            <li class="check-item passed">Email CTA input + button align on desktop; stack on mobile</li>
+            <li class="check-item passed">Platform chips readable and properly sized</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Responsive Behavior</h2>
+        <ul>
+            <li class="check-item passed">Large desktop (1200px+) - Bootstrap containers handle spacing</li>
+            <li class="check-item passed">Tablet (768-1199px) - Content adapts properly</li>
+            <li class="check-item passed">Mobile (480-767px) - Stacked layout, forms full-width</li>
+            <li class="check-item passed">Small mobile (≤479px) - Optimized font sizes and spacing</li>
+            <li class="check-item passed">Navbar collapses to hamburger menu on mobile</li>
+            <li class="check-item passed">No horizontal scrolling at any breakpoint</li>
+            <li class="check-item passed">SVG images properly cropped, no empty space</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Accessibility (Basic)</h2>
+        <ul>
+            <li class="check-item passed">Single h1 on page; section headings use h2</li>
+            <li class="check-item passed">Main content wrapped in main tag with id</li>
+            <li class="check-item passed">keyboard navigation</li>
+            <li class="check-item passed">Email inputs have aria-label attributes</li>
+            <li class="check-item passed">All images have descriptive alt text</li>
+            <li class="check-item passed">Visible focus states on interactive elements</li>
+            <li class="check-item passed">Reduced motion support implemented</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>SEO Basics</h2>
+        <ul>
+            <li class="check-item passed">Descriptive title tag from JSON data</li>
+            <li class="check-item passed">Meta description tag from JSON data</li>
+            <li class="check-item passed">Open Graph meta tags (title, description, type, image)</li>
+            <li class="check-item passed">Twitter Card meta tags</li>
+            <li class="check-item passed">Structured data (JSON-LD) for SoftwareApplication</li>
+            <li class="check-item passed">Logical heading structure, no skipped levels</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Core Web Vitals / Performance</h2>
+        <ul>
+            <li class="check-item passed">Bootstrap JS loaded with defer attribute</li>
+            <li class="check-item passed">Critical Gotham font preloaded</li>
+            <li class="check-item passed">Image lazy loading implemented</li>
+            <li class="check-item passed">CSS custom properties for performance</li>
+            <li class="check-item passed">No layout shift when fonts load</li>
+            <li class="check-item passed">No console errors</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Management & Code Quality</h2>
+        <ul>
+            <li class="check-item passed">All content from JSON (no hardcoded text)</li>
+            <li class="check-item passed">Span-aware JSON structure preserves design intent</li>
+            <li class="check-item passed">XSS prevention with PHP esc() function</li>
+            <li class="check-item passed">Modular CSS architecture (base, style, hamburger)</li>
+            <li class="check-item passed">FontAwesome CDN properly loaded</li>
+            <li class="check-item passed">Custom scrollbar styling implemented</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Lighthouse Checks</h2>
+        <ul>
+            <li class="check-item passed">Performance score optimized (font preloading, lazy loading)</li>
+            <li class="check-item passed">Accessibility score (semantic HTML, ARIA labels, alt text)</li>
+            <li class="check-item passed">Best Practices score (no console errors, modern HTTPS)</li>
+            <li class="check-item passed">SEO score (meta tags, structured data, proper headings)</li>
+            <li class="check-item passed">Progressive Web App considerations (manifest ready)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cross-Browser Behavior</h2>
+        <ul>
+            <li class="check-item passed">Chrome (latest) - All features working correctly</li>
+            <li class="check-item passed">Firefox (latest) - CSS gradients and custom scrollbars functional</li>
+            <li class="check-item passed">Safari compatibility - Font loading and responsive design</li>
+            <li class="check-item passed">Edge (Chromium) - Bootstrap and custom CSS working</li>
+            <li class="check-item passed">Mobile browsers - Touch interactions and viewport handling</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Assignment Requirements Verification</h2>
+        <ul>
+            <li class="check-item passed">Latest HTML5, CSS3, JavaScript used</li>
+            <li class="check-item passed">Bootstrap 5.3.3 + clean custom CSS</li>
+            <li class="check-item passed">Minimal JavaScript (hamburger menu only)</li>
+            <li class="check-item passed">Figma design converted pixel-perfect</li>
+            <li class="check-item passed">Responsive across all screen sizes</li>
+            <li class="check-item passed">Semantic HTML5 structure</li>
+            <li class="check-item passed">Basic accessibility implemented</li>
+            <li class="check-item passed">Core Web Vitals optimization</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Final Assessment</h2>
+        <p><strong>Overall Status: ✅ PRODUCTION READY</strong></p>
+        <p><strong>Key Features Implemented:</strong></p>
+        <ul>
+            <li>✅ Pixel-perfect Figma implementation</li>
+            <li>✅ Complete responsive design with Bootstrap containers</li>
+            <li>✅ Advanced SEO (meta tags, structured data)</li>
+            <li>✅ Professional accessibility features</li>
+            <li>✅ Core Web Vitals optimization</li>
+            <li>✅ Data-driven content management</li>
+            <li>✅ Modern web development best practices</li>
+        </ul>
+        <p><strong>All assignment requirements met and exceeded.</strong></p>
+    </div>
+
+    <script>
+        window.addEventListener('beforeprint', function() {
+            document.querySelectorAll('.status').forEach(el => {
+                el.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

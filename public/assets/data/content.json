@@ -24,15 +24,21 @@
     ]
   },
   "whySection": {
-    "title": "Why make a C++ PDF Library",
+    "title": {
+      "before": "Why make a ",
+      "spanned": "C++ PDF Library"
+    },
     "body": [
       "C++ is widely used in performance-critical systems.",
       "IronPDF enables efficient document processing."
     ]
   },
   "platformSection": {
-    "title": "Early Access to C++ PDF Library",
-    "body": "Join early and help shape the product.",
+    "title": {
+      "before": "Early Access to ",
+      "spanned": "C++ PDF Library"
+    },
+    "body": "Joining the early access program will allow you to collaborate closely with our engineering team. You will be playing a key role in the development process as you share your early experiences using the C++ PDF library before its official launch. Your continual feedback after we release the library will be immensely helpful as we release new features and improve on existing features.",
     "chips": [
       { "status": "Released", "product": "IRONPDF", "for": "Java" },
       { "status": "Coming Soon", "product": "IRONPDF", "for": "Python" },

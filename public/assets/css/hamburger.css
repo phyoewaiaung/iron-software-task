@@ -155,4 +155,14 @@
   .site-nav {
     display: none !important;
   }
+  
+  /* Smooth transitions for mobile */
+  .mobile-nav__panel .nav-link {
+    transition: all var(--transition-normal);
+  }
+  
+  .mobile-nav__panel .nav-link:hover {
+    transform: translateX(8px);
+    color: #e01a59 !important;
+  }
 }
