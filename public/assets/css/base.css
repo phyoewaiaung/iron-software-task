@@ -59,7 +59,7 @@ body {
     radial-gradient(900px 700px at 80% 0%, #2b0d2f 0%, transparent 55%),
     linear-gradient(180deg, var(--bg-900), var(--bg-850)) !important;
   background-color: var(--bg-900) !important;
-  position: relative
+  position: relativezzz
 }
 
 .tracking-wide {
