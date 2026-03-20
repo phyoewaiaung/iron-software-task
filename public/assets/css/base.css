@@ -65,3 +65,28 @@ body {
 .tracking-wide {
   letter-spacing: 0.08em;
 }
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0a1c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #635663;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b39ab3;
+}

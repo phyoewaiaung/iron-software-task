@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row align-items-center">
 
-      <div class="col-lg-6">
+      <div class="col-xl-6">
         <div class="hero-product-logo">
 
   <!-- ICON -->
