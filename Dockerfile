@@ -1,7 +1,10 @@
 FROM php:8.2-apache
 
-# Skip docker-php-ext-install intl: compiling ICU/intl is slow and often OOMs or
-# times out on small builders (e.g. Render free). This demo app does not need intl.
+# ext-intl is required by codeigniter4/framework (Composer + runtime). Use
+# mlocati/install-php-extensions for a single, well-tested intl install path.
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+RUN chmod +x /usr/local/bin/install-php-extensions \
+    && IPE_PROCESSOR_COUNT=1 install-php-extensions intl
 
 RUN a2enmod rewrite
 
