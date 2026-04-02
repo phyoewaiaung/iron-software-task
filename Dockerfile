@@ -4,7 +4,7 @@ FROM php:8.2-apache
 # mlocati/install-php-extensions for a single, well-tested intl install path.
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 RUN chmod +x /usr/local/bin/install-php-extensions \
-    && IPE_PROCESSOR_COUNT=1 install-php-extensions intl
+    && IPE_PROCESSOR_COUNT=1 install-php-extensions intl zip
 
 RUN a2enmod rewrite
 
