@@ -1,9 +1,7 @@
 FROM php:8.2-apache
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libicu-dev \
-    && docker-php-ext-install intl \
-    && rm -rf /var/lib/apt/lists/*
+# Skip docker-php-ext-install intl: compiling ICU/intl is slow and often OOMs or
+# times out on small builders (e.g. Render free). This demo app does not need intl.
 
 RUN a2enmod rewrite
 
